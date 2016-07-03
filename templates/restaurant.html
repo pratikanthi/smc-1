@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+<html>
+	<head>
+			<title>{% block title %}{{ res.full_name }} {% endblock %}</title>
+	</head>
+
+
+	<body>
+
+		{% block content %}
+		
+		<h1>{{ res.full_name }}</h1>
+		
+		{% endblock %}
+	</body>
+
+</html>

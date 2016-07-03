@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+<html>
+	<head>
+			<title>{% block title %} SMC {% endblock %}</title>
+	</head>
+
+
+	<body>
+
+		{% block content %}
+		
+		<h1>Samosa Meets Chai</h1>
+		{% for x in res%}
+			<h2><a href="restaurants/{{ x.name_slug }}">{{ x.full_name }}</a></h2>
+			<p>{{ x.full_address }}, {{ x.contact }}</p>
+			{% if x.parking %}
+				<p>Parking available</p>
+			{% else %}
+				<p>Parking un available</p>
+			{% endif %}
+		{% endfor %}
+
+		{% endblock %}
+	</body>
+
+</html>
